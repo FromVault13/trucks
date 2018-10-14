@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trucks</title>
+</head>
+<body>
+    <table width="100%" bgcolor="#cfe2f3" align="center" border="1" rules="all">
+        <caption>
+            <div align="left" style="padding-bottom: 20px; font-size: 20px">
+                <form id='data' method="POST" action="" >Модель:
+                    {% csrf_token %}
+                    <select name='mark' form="data">
+                        {% for i in models %}
+                        <option>{{ i }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Применить</button>
+                </form>
+            </div>
+        </caption>
+        <tr align="center">
+            <td>бортовой номер</td>
+            <td>модель</td>
+            <td>макс. грузоподъемность</td>
+            <td>текущий вес</td>
+            <td>перегруз, %</td>
+        </tr>
+        {% for j in trucks %}
+        <tr align="center">
+            {% for option in j %}
+            <td>{{ option }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+virtualenv/
+.idea/
+zadanie.docx
+__pycache__/
