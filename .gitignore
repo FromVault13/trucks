@@ -2,3 +2,5 @@ virtualenv/
 .idea/
 zadanie.docx
 __pycache__/
+db.sqlite3
+

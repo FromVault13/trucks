@@ -25,7 +25,7 @@ SECRET_KEY = 'go5iv8c=tdb_@roy*q=gh&2bhooq#mp5nuazl#^x5u7^!kj-+6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -129,7 +129,6 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     }
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     ALLOWED_HOSTS = ['*']
-    DEBUG = True
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
